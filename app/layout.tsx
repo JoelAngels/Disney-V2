@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 
 import "./globals.css";
+import Header from "@/components/Header";
 
 const bricolage = Bricolage_Grotesque({ subsets: ["latin"] });
 
@@ -17,7 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={bricolage.className}>{children}</body>
+      <body className={bricolage.className}>
+        {/* Every single page */}
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
