@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-bricolage_grotesque",
+  display: "swap",
 });
 
 export const metadata: Metadata = {

@@ -12,7 +12,7 @@ type Props = {
 function genre({ params: { id }, searchParams: { genre } }: Props) {
   return (
     <div className="text-red-500">
-      welcome to the genre with ID: {id} and name: {genre}
+      welcome to the genre with ID: {id} and name : {genre}
       <Button variant={"ghost"}>Click Me</Button>
     </div>
   );

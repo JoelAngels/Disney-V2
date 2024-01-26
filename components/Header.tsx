@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ThemeToggler } from "./Theme/ThemeToggler";
 import SearchInput from "./SearchInput";
+import GenreDropdown from "./GenreDropdown";
 
 function Header() {
   return (
@@ -22,6 +23,7 @@ function Header() {
       {/*Genre Drop Down  */}
 
       <div className="flex space-x-2">
+        <GenreDropdown />
         <SearchInput />
         <ThemeToggler />
       </div>
