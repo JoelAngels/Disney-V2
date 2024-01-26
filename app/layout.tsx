@@ -4,7 +4,10 @@ import { ThemeProvider } from "@/components/Theme/ThemeProvider";
 import "./globals.css";
 import Header from "@/components/Header";
 
-const bricolage = Bricolage_Grotesque({ subsets: ["latin"] });
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-bricolage_grotesque",
+});
 
 export const metadata: Metadata = {
   title: "Disney App",
@@ -26,6 +29,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
+
           {children}
         </ThemeProvider>
       </body>
