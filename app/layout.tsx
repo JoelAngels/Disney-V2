@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
-
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 import Header from "@/components/Header";
 
@@ -18,10 +18,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={bricolage.className}>
-        {/* Every single page */}
-        <Header />
-        {children}
+      <body className={`dark:bg-[#1A1C29] bg-white, ${bricolage.className}`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

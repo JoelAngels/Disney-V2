@@ -13,6 +13,10 @@ function Header() {
           className={"cursor-pointer "}
         />
       </Link>
+
+      {/*Genre Drop Down  */}
+
+      <div className="flex space-x-2"></div>
     </header>
   );
 }
