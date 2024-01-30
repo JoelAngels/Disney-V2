@@ -60,9 +60,9 @@ export async function getPopularMovies() {
 export async function getSearchedMovies(term: string) {
   const url = new URL("https://api.themoviedb.org/3/search/movie");
   url.searchParams.set("query", term);
-  //   url.searchParams.set("include_adult", "false");
-  //   url.searchParams.set("language", "en-US");
-  //   url.searchParams.set("page", "1");
+  url.searchParams.set("include_adult", "false");
+  url.searchParams.set("language", "en-US");
+  url.searchParams.set("page", "1");
 
   const options: RequestInit = {
     method: "GET",

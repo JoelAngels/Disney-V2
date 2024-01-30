@@ -5,7 +5,6 @@ type Props = {
 };
 
 import { Movie } from "@/typings";
-import React from "react";
 import MovieCard from "./MovieCard";
 import { cn } from "@/lib/utils";
 

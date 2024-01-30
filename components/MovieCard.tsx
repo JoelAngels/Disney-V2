@@ -1,7 +1,6 @@
 import getImagePath from "@/lib/getImagePath";
 import { Movie } from "@/typings";
 import Image from "next/image";
-import React from "react";
 
 function MovieCard({ movie }: { movie: Movie }) {
   return (
