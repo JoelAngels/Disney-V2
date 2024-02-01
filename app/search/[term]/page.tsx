@@ -15,8 +15,9 @@ async function SearchPage({ params: { term } }: Props) {
 
   //   Api call to get the movies
   const movies = await getSearchedMovies(termToUse);
-  const popularMovies = await getPopularMovies();
+
   //Api call to get the Popular Movies
+  const popularMovies = await getPopularMovies();
 
   return (
     <div className="max-w-7xl mx-auto">

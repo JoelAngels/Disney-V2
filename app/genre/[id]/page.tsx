@@ -1,20 +1,24 @@
-import { Button } from "@/components/ui/button";
+import MoviesCarousel from "@/components/MoviesCarousel";
+import { getDiscoverMovies } from "@/lib/getMovies";
 
 type Props = {
   params: {
-    id: number;
+    id: string;
   };
   searchParams: {
     genre: string;
   };
 };
 
-function genre({ params: { id }, searchParams: { genre } }: Props) {
+async function Genre({ params: { id }, searchParams: { genre } }: Props) {
+  const movies = await getDiscoverMovies(id);
   return (
-    <div className="text-red-500">
-      welcome to the genre with ID: {id} and name : {genre}
-      <Button variant={"ghost"}>Click Me</Button>
+    <div className="max-w-7xl mx-auto">
+      <div className="flex flex-col space-y-5 mt-32 xl:mt-42">
+        <h1 className="text-6xl font-bold px-10">Results for {genre}</h1>
+        <MoviesCarousel title={`Genre`} movies={movies} isVertical />
+      </div>
     </div>
   );
 }
-export default genre;
+export default Genre;
